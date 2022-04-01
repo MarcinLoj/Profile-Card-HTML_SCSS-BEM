@@ -1,0 +1,93 @@
+@use "../utitlies/colors";
+@use "../utitlies/fonts";
+@use "../utitlies/variables";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    @include font-lexend-deca;
+    color: $black;
+    font-size: $font-size-vsm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../../images/bg-pattern-bottom.svg"), url("../../../images/bg-pattern-top.svg");
+    background-repeat: no-repeat;
+    background-position: 88vh 50vh, -10vh -50vh;
+    background-color: $dark-cyan;
+}
+.card {
+    width: 300px;
+    padding-bottom: 16px;
+    background-color: $white;
+    background-image: url("../../../images/bg-pattern-card.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 8px;
+    text-align: center;
+}
+.user {
+    &__img {
+        margin-top: 25%;
+        width: 80px;
+        border-radius: 999px;
+        border: 4px solid $white;
+    }
+    &__credentials {
+        display: flex;
+        justify-content: center;
+    }
+    &__name {
+        font-size: $font-size-smd;
+        font-weight: $font-weight-lg;
+        opacity: 0.8;
+        margin-top: 8px;
+        margin-right: 8px;
+        line-height: $line-height-size-lg;
+    }
+    &__age {
+        font-size: $font-size-smd;
+        align-self: flex-end;
+        line-height: $line-height-size-lg;
+        opacity: 0.5;
+    }
+    &__country {
+        font-size: $font-size-sm;
+        font-weight: $font-weight-md;
+        opacity: 0.5;
+        letter-spacing: 0.5px;
+        margin: px 0 24px;
+    }
+    &__divider {
+        opacity: 0.3;
+    }
+    &__statistics {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 16px;
+    }
+    &__statistic-count {
+        @include font-red-hat-display;
+        font-size: $font-size-vsm;
+        line-height: $line-height-size-lg;
+    }
+    &__statistic-desc {
+        font-weight: $font-weight-md;
+        font-size: $font-size-exsm;
+        opacity: 0.5;
+        letter-spacing: 1px;
+    }
+}
+@media (max-width: 375px) {
+    body {
+        background-image: url("../../../images/bg-pattern-bottom.svg"), url("../../../images/bg-pattern-top.svg");
+        background-position: 10vh 48vh, -74vh -60vh;
+    }
+}

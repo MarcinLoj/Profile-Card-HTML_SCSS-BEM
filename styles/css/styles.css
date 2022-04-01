@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans:wght@700&family=Lexend+Deca&family=Red+Hat+Display:wght@900&family=Roboto+Condensed:wght@300&family=Roboto:ital,wght@0,900;1,400&display=swap");
+@use "../utitlies/colors";
+@use "../utitlies/fonts";
+@use "../utitlies/variables";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Lexend Deca', sans-serif;
+  color: #333;
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../../images/bg-pattern-bottom.svg"), url("../../../images/bg-pattern-top.svg");
+  background-repeat: no-repeat;
+  background-position: 88vh 50vh, -10vh -50vh;
+  background-color: #19a2ae;
+}
+
+.card {
+  width: 300px;
+  padding-bottom: 16px;
+  background-color: #fff;
+  background-image: url("../../../images/bg-pattern-card.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.user__img {
+  margin-top: 25%;
+  width: 80px;
+  border-radius: 999px;
+  border: 4px solid #fff;
+}
+
+.user__credentials {
+  display: flex;
+  justify-content: center;
+}
+
+.user__name {
+  font-size: 1rem;
+  font-weight: 700;
+  opacity: 0.8;
+  margin-top: 8px;
+  margin-right: 8px;
+  line-height: 1.5rem;
+}
+
+.user__age {
+  font-size: 1rem;
+  align-self: flex-end;
+  line-height: 1.5rem;
+  opacity: 0.5;
+}
+
+.user__country {
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0.5;
+  letter-spacing: 0.5px;
+  margin: px 0 24px;
+}
+
+.user__divider {
+  opacity: 0.3;
+}
+
+.user__statistics {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px;
+}
+
+.user__statistic-count {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+.user__statistic-desc {
+  font-weight: 500;
+  font-size: 0.5rem;
+  opacity: 0.5;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 375px) {
+  body {
+    background-image: url("../../../images/bg-pattern-bottom.svg"), url("../../../images/bg-pattern-top.svg");
+    background-position: 10vh 48vh, -74vh -60vh;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
